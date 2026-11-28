@@ -9,6 +9,9 @@ public class Maquina {
 	private double capacidadMaxima;
 	private double cantidadActual;
 	
+	public Maquina() {
+		
+	}
 
 	public Maquina(String nombreCerveza, String descripcion, String codigo, double precioPorMl, double capacidadMaxima) {
 
@@ -81,7 +84,7 @@ public class Maquina {
 	}
 
 	public void llenarMaquina() {
-		this.cantidadActual = this.capacidadMaxima - 200;
+		this.cantidadActual = this.capacidadMaxima;
 	}
 
 	public boolean recargarCerveza(double cantidad) {
@@ -99,8 +102,8 @@ public class Maquina {
 
 	public double servirCerveza(double cantidad) {
 
-		if (cantidadActual >= cantidad) {
-			cantidadActual = cantidadActual - cantidad;
+		if (cantidadActual >= 200) {
+			cantidadActual = cantidadActual - 200;
 
 			double valor;
 			valor = cantidad * precioPorMl;
